@@ -11,7 +11,7 @@
 
 It uses **React Router** for navigation, **Redux** for state management (specifically for favourites), and **Axios** to fetch recipe data from a local `recipes.json` file.
 
-🔗 **Live Website:** [https://foodify-recipies.netlify.app/homepage](https://foodify-recipies.netlify.app/homepage)
+🔗 **Live Website:** [https://foodifyonline.netlify.app/](https://foodifyonline.netlify.app/)
 
 ---
 
@@ -100,23 +100,23 @@ Click the **Home icon** (🏠) in the navbar to load the homepage with trending 
 
 ### 🔗 Routes
 
-| Route | Component | Description |
-|-------|-----------|-------------|
-| `/` or `/homepage` | `Homepage.js` | Carousel view of recipes |
-| `/favourites` | `Favourites.js` | Grid of saved favourites |
-| `/recipe/:id` | `RecipeCard.js` | Full recipe detail page |
+| Route            | Component        | Description                   |
+|------------------|------------------|-------------------------------|
+| `/` or `/homepage` | `Homepage.js`    | Carousel view of recipes      |
+| `/favourites`    | `Favourites.js`   | Grid of saved favourites      |
+| `/recipe/:id`    | `RecipeCard.js`   | Full recipe detail page       |
 
 ### 🗂 JavaScript Files & CSS
 
-| JS File | CSS File | Description |
-|---------|----------|-------------|
-| `Header.js` | `Header.css` | Navbar with search & nav links |
-| `Homepage.js` | `Carousel.css`, `Homepage.css` | Recipe carousel |
-| `Favourites.js` | `Favourite.css` | Grid of favourites |
-| `Recipe.js` | — | Base for testing recipe fetching |
-| `RecipeCard.js` | `RecipeCard.css` | Detailed recipe view |
-| `favouritesSlice.js` | — | Redux logic for favourites |
-| `store.js` | — | Redux store setup |
+| JS File           | CSS File                   | Description                             |
+|-------------------|----------------------------|-----------------------------------------|
+| `Header.js`       | `Header.css`               | Navbar with search & nav links          |
+| `Homepage.js`     | `Carousel.css`, `Homepage.css` | Recipe carousel                      |
+| `Favourites.js`   | `Favourite.css`            | Grid of favourites                      |
+| `Recipe.js`       | —                          | Base for testing recipe fetching        |
+| `RecipeCard.js`   | `RecipeCard.css`           | Detailed recipe view                    |
+| `favouritesSlice.js` | —                       | Redux logic for favourites              |
+| `store.js`        | —                          | Redux store setup                       |
 
 ---
 
