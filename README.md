@@ -11,7 +11,7 @@
 
 It uses **React Router** for navigation, **Redux** for state management (specifically for favourites), and **Axios** to fetch recipe data from a local `recipes.json` file.
 
-🔗 **Live Website:** [Foodify Website](https://foodify-webappp.netlify.app/homepage)
+🔗 **Live Website:** [Foodify Website]((https://foodify-recipies.netlify.app/homepage))
 
 ---
 
