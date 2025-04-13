@@ -1,153 +1,111 @@
-# Foodify Website
+🍲 Foodify Website
+Overview
+Foodify is a modern web application built with React that helps users explore, save, and view delicious recipes. The app features:
 
-## Overview
+A dynamic homepage with a carousel of trending recipes.
 
-Foodify is a web application built with React that allows users to explore, search, save, and view recipes. It features a dynamic homepage with a carousel of trending recipes, a real-time search bar, a favourites page, and detailed recipe views. The application uses React Router for navigation, Redux for managing favourites, and Axios for fetching data from a local `recipes.json` file.
+A search bar to find specific recipes.
 
-🟢 **Live Site:** [Foodify Website](https://your-netlify-link-here)
+A favourites page to manage saved recipes.
 
----
+Detailed recipe pages with ingredients, steps, video guides, ratings, and comments.
 
-## Features
+The app uses React Router for navigation, Redux for managing favourites, and Axios to fetch data from a local recipes.json file.
 
-- **Homepage Carousel:** Displays trending recipes (3 at a time on large screens, 1 at a time on small screens). Users can navigate using arrow buttons.
-- **Favourites:** Tap the heart icon to add/remove recipes. Stored in Redux with localStorage for persistence.
-- **Search Bar:** Located in the header. Searches `recipes.json` and shows matching recipes or a "recipe not available" message.
-- **Recipe Details:** Click "View Recipe" to see full details like image, ingredients, steps, and video guide.
-- **Responsive Design:** Fully responsive layout with icon-only navbar on smaller screens.
-- **Persistent Favourites:** Favourites are retained after page reload using `localStorage`.
-- **Rating and Comments:** Users can rate and comment on recipes, view their own comments, and delete them with confirmation prompts.
-- **YouTube Video Integration:** Each recipe includes an embedded video for visual guidance.
+👉 Live Demo: Visit the Live Website
 
----
+🚀 Features
+Homepage Carousel
+Trending recipes displayed 3 at a time (1 on small screens), with left/right arrow navigation.
 
-## Getting Started
+Favourites
+Tap the heart icon on any recipe to add/remove it from your favourites. Favourites persist using localStorage.
 
-### Initial State
+Search Bar
+Located in the header. Matches recipe titles and links to detailed pages or shows a "recipe not available" message.
 
-When first opened, the app displays only the navbar. To view content:
+Recipe Details Page
+View full recipe details: image, ingredients, steps, video, user comments, and rating system.
 
-1. Click the **Homepage icon** (house icon) in the navbar.
+Responsive Design
+Mobile-friendly layout with simplified icons and scalable content.
 
-### Using the Favourites Feature
+Persistent State
+Favourites are stored via Redux and saved to localStorage.
 
-- Favourites start empty.
-- Tap the heart icon on a recipe to add it.
-- Tap again to remove it.
-- View saved recipes by clicking the **Favourites icon** (heart icon) in the navbar.
+Commenting & Ratings
+Users can add their name, rating (stars), and comments for each recipe. Deleting a comment prompts confirmation.
 
----
+YouTube Integration
+Each recipe includes a YouTube video guide embedded on the recipe detail page.
 
-## How It Works
-
-### Homepage
-
-- Component: `Homepage.js`
-- Fetches data from `recipes.json`.
-- Displays trending recipes in a sliding carousel.
-- Users can favourite recipes or click "View Recipe" for details.
-
-### Search
-
-- Located in `Header.js`
-- Filters recipes in real-time.
-- Displays matching recipes with thumbnail and clickable links.
-- Shows a "recipe not available" message if not found.
-
-### Favourites
-
-- Component: `Favourites.js`
-- Displays all saved recipes from Redux state.
-- Allows users to remove recipes or navigate to recipe details.
-
-### Recipe Details
-
-- Component: `RecipeCard.js`
-- Uses `:id` from the URL to fetch the correct recipe from `recipes.json`.
-- Shows image, ingredients, steps, video, ratings, and comments.
-
----
-
-## Tech Stack
-
-- **React:** Frontend framework.
-- **React Router:** Page navigation.
-- **Redux Toolkit:** State management for favourites.
-- **Axios:** Fetching recipes from local JSON.
-- **Material-UI Icons:** Icons for UI elements.
-- **CSS:** Custom styles for components.
-
----
-
-## File Structure & Routes
-
-### Routes
-
-| Route             | Component       | Description                                |
-|------------------|-----------------|--------------------------------------------|
-| `/` or `/homepage` | `Homepage.js`   | Carousel with trending recipes             |
-| `/favourites`     | `Favourites.js` | Saved recipes                              |
-| `/recipe/:id`     | `RecipeCard.js` | Full recipe details                        |
-
-### Key Files
-
-- `Header.js` (`Header.css`) – Navbar with logo, search bar, and nav icons.
-- `Homepage.js` (`Homepage.css`, `Carousel.css`) – Displays carousel of recipes.
-- `Favourites.js` (`Favourite.css`) – Shows saved favourites in grid layout.
-- `RecipeCard.js` (`RecipeCard.css`) – Recipe details, ratings, and comments.
-- `favouritesSlice.js` – Redux slice for managing favourites.
-- `store.js` – Redux store setup.
-- `recipes.json` – Stores all recipe data.
-
----
-
-## Installation & Setup
-
-Clone the repo:
-```bash
+📁 File Structure & Routes
+🗂️ Routes
+Path	Component	Description
+/ or /homepage	Homepage.js	Displays recipe carousel
+/favourites	Favourites.js	Lists saved recipes
+/recipe/:id	RecipeCard.js	Shows selected recipe details
+🧩 Components & Styling
+JavaScript File	CSS File	Purpose
+Header.js	Header.css	Navbar with logo, search, icons
+Homepage.js	Carousel.css, Homepage.css	Homepage layout and carousel
+Favourites.js	Favourite.css	Grid display of favourites
+RecipeCard.js	RecipeCard.css	Detailed recipe view
+Recipe.js	—	Loads all recipe data (optional)
+favouritesSlice.js	—	Redux logic for favourites
+store.js	—	Redux store setup
+📦 Getting Started
+Clone the repository:
+bash
+Copy
+Edit
 git clone https://github.com/arnolddecoder/Foodify-website.git
-Navigate to project directory:
-
+Navigate to the project directory:
 bash
 Copy
 Edit
 cd Foodify-website
 Install dependencies:
-
 bash
 Copy
 Edit
 npm install
 Run the app locally:
-
 bash
 Copy
 Edit
 npm start
-Visit http://localhost:3000 to view the app.
+Visit http://localhost:3000 to view the app in your browser.
 
-Additional Notes
-Each main component has its own .css file for styling.
+📌 Additional Notes
+Each major component has its own .css file for styling.
 
-Axios is used in some components (e.g., Recipe.js) while others use the native fetch API.
+Both Axios and native fetch API are used for fetching recipes.json.
 
-The UI adapts based on screen size, simplifying icons and layout for mobile users.
+Fully responsive layout that adapts based on screen size.
 
-Future Improvements
-Autoload Homepage: Ensure the homepage loads automatically when visiting the Netlify link.
+Icons simplify on mobile screens for cleaner navigation.
 
-Firebase Integration: Store data in Firebase and implement user authentication.
+🔮 Future Improvements
+Autoload Homepage
+Ensure the homepage automatically loads on the Netlify site without needing manual navigation.
 
-Enhanced Responsiveness: Improve accessibility and layout flexibility for all devices.
+Firebase Integration
+Use Firebase for real-time data storage and user authentication (login/signup).
 
-Live Demo
-👉 Visit the Live Website
+Enhanced Responsiveness
+Improve accessibility, layout flexibility, and mobile UX.
 
-Recent Updates
-Improved Search UI: Displays result name with thumbnail, or a friendly message if not found.
+📢 Recent Updates
+Improved Search UI
+Search results now display the recipe name and a thumbnail, or a friendly “not available” message.
 
-Ratings & Comments: Users can leave comments and rate recipes. Deleting comments requires confirmation.
+Ratings & Comments
+Users can rate recipes and leave comments with their names. Comments can be removed with confirmation.
 
-Video Integration: Each recipe includes a YouTube video walkthrough.
+YouTube Video Integration
+Each recipe includes a video guide to follow along visually.
 
-Updated Styling: Better visuals across homepage and recipe details.
+Updated Styling
+Visual improvements to the homepage, search bar, and recipe details page.
+
