@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Foodify/static/css/main.d64f9fac.css",
+    "main.js": "/Foodify/static/js/main.5c0d8c0d.js",
+    "index.html": "/Foodify/index.html",
+    "main.d64f9fac.css.map": "/Foodify/static/css/main.d64f9fac.css.map",
+    "main.5c0d8c0d.js.map": "/Foodify/static/js/main.5c0d8c0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d64f9fac.css",
+    "static/js/main.5c0d8c0d.js"
+  ]
+}
