@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "title": "Oxtail Stew",
+    "image": "images/oxtail1.jpg",
+    "ingredients": [
+      "Olive oil – Sunflower, safflower, avocado, grape seed, or vegetable oils can be used instead.",
+      "Oxtails – Make sure they’re fully thawed before starting.",
+      "Salt & pepper – Season to taste.",
+      "Onion – White or yellow work best.",
+      "Green onion – Use more or less as per your preference, this is for garnish only.",
+      "Garlic & ginger – Fresh is best!",
+      "Tomato paste – Make sure it’s the paste – not sauce or pureed.",
+      "Habanero – Use more, less, or none as you prefer.",
+      "Seasonings – Allspice, smoked paprika, thyme, bay leaves.",
+      "Soy sauce – You can also add a bit of Worcestershire if preferred.",
+      "Beef broth – Other types of broth will work, but beef broth will give the deepest flavor.",
+      "Lima beans – Butter beans, or white/navy beans will also work.",
+      "Cornstarch – To thicken your stew."
+    ],
+    "steps": [
+      "Sear the oxtails: Heat the olive oil in a large braiser or Dutch oven over medium-high heat. Season the oxtails with salt and pepper, and sear them on all sides until browned.",
+      "Sauté: Add the onion to the pot and cook until translucent and softened. Add the garlic, ginger, and habanero, then stir and cook for 1 minute. Stir in the allspice, smoked paprika, soy sauce, and tomato paste, then cook until the paste browns slightly.",
+      "Braise: Add the oxtails back to the pot. Stir in the beef broth, thyme, and bay leaves, then bring the pot to a boil. Turn the heat to low, cover with a lid slightly cracked, and simmer for 2 hours. Remove the lid, stir in the butter beans, and simmer uncovered for another 30-45 minutes.",
+      "Finish: Remove the bay leaves and thyme sprigs. Whisk the cornstarch with 1 tbsp water to create a slurry. Stir the slurry into the pot and increase the heat to medium, stirring until the mixture thickens. Garnish with freshly chopped green onion."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Spaghetti Aglio e Olio",
+    "image": "/images/Spaghetti-Aglio-e-Olio.jpg",
+    "ingredients": [
+      "Spaghetti",
+      "Garlic, thinly sliced",
+      "Olive oil",
+      "Red pepper flakes",
+      "Fresh parsley, chopped",
+      "Salt & black pepper"
+    ],
+    "steps": [
+      "Cook spaghetti in salted water until al dente, then drain, reserving 1/2 cup of pasta water.",
+      "Heat olive oil in a pan over medium heat, add garlic and red pepper flakes, and sauté until garlic is golden.",
+      "Add cooked pasta to the pan along with reserved pasta water, stirring to coat.",
+      "Season with salt and black pepper, then toss with fresh parsley before serving."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chicken Tikka Masala",
+    "image": "/images/Chicken-Tikka-Masala.jpg",
+    "ingredients": [
+      "Chicken breast, cubed",
+      "Yogurt",
+      "Tomato sauce",
+      "Heavy cream",
+      "Garlic & ginger",
+      "Garam masala",
+      "Cumin & paprika",
+      "Salt & pepper"
+    ],
+    "steps": [
+      "Marinate chicken in yogurt and spices for at least 1 hour.",
+      "Sauté garlic and ginger in oil, then add tomato sauce and cook until thick.",
+      "Add cream and cooked chicken, then simmer for 10 minutes until flavors blend.",
+      "Serve hot with rice or naan bread."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Tacos",
+    "image": "/images/Tacos.jpg",
+    "ingredients": [
+      "Tortillas",
+      "Ground beef or chicken",
+      "Onion, diced",
+      "Tomato, chopped",
+      "Cheese",
+      "Salsa",
+      "Lettuce"
+    ],
+    "steps": [
+      "Cook ground meat with onion and spices until browned.",
+      "Warm tortillas on a skillet.",
+      "Assemble tacos with meat, cheese, lettuce, and salsa."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "French Crepes",
+    "image": "/images/French-Crepes.jpg",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Butter",
+      "Sugar (optional)"
+    ],
+    "steps": [
+      "Whisk all ingredients into a smooth batter.",
+      "Cook thin crepes in a non-stick pan.",
+      "Fill with fruit, chocolate, or cheese, then fold and serve."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Shakshuka",
+    "image": "/images/Shakshuka.jpg",
+    "ingredients": [
+      "Eggs",
+      "Tomatoes",
+      "Bell peppers",
+      "Onion & garlic",
+      "Cumin & paprika",
+      "Salt & pepper"
+    ],
+    "steps": [
+      "Sauté onions, peppers, and garlic with spices.",
+      "Add tomatoes and simmer until thick.",
+      "Crack eggs into the sauce and cook until set."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Cheeseburger",
+    "image": "/images/Cheeseburger.jpg",
+    "ingredients": [
+      "Ground beef patty",
+      "Burger bun",
+      "Cheese",
+      "Lettuce, tomato, pickles"
+    ],
+    "steps": [
+      "Grill beef patty and melt cheese on top.",
+      "Toast buns and assemble with toppings."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Butter Chicken",
+    "image": "/images/Butter-Chicken.jpg",
+    "ingredients": [
+      "Chicken breast",
+      "Butter",
+      "Tomato puree",
+      "Cream",
+      "Ginger & garlic",
+      "Garam masala"
+    ],
+    "steps": [
+      "Cook chicken with spices.",
+      "Make a creamy tomato sauce and combine."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Stir-Fried Noodles",
+    "image": "/images/Stir-Fried-Noodles.jpg",
+    "ingredients": [
+      "Noodles",
+      "Soy sauce",
+      "Garlic & ginger",
+      "Veggies & protein"
+    ],
+    "steps": [
+      "Cook noodles and stir-fry with sauce and veggies."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Pancakes",
+    "image": "/images/Pancakes.jpg",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Sugar",
+      "Baking powder"
+    ],
+    "steps": [
+      "Mix batter and cook on a pan.",
+      "Serve with syrup or fruit."
+    ]
+  }
+]

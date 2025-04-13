@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.heading{
+  margin-top: 7rem;
+  text-align: center;
+}
+.button-container {
+  display: flex;
+  gap: 15px; /* Adjust the space between the two buttons */
+  justify-content: center;
+  margin-top: 10px; /* Adds spacing above the buttons */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Add spacing between the buttons */
+  align-items: center; /* Center the buttons horizontally */
+  margin-top: 10px; /* Add spacing above the buttons */
 }
