@@ -2,206 +2,234 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
-}
-
-/* Section: Navbar Styling */
-/* Styles for the navigation bar at the top of the page */
-header nav {
-    display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-between; /* Space out logo, search bar, and icons evenly */
-    align-items: center; /* Vertically center all items */
-    height: 70px; /* Fixed height for the navbar */
-    background-color: #ffdfb7; /* Light peach background color for the navbar */
-    border-top: 1px solid black; /* Thin black border at the top */
-    padding: 8px; /* Padding around the navbar content */
-    color: #12100e; /* Dark text color for navbar elements */
-}
-
-/* Section: Navbar Links */
-/* Styles for links within the navbar (e.g., logo, Home, Favourites) */
-header a {
-    text-decoration: none; /* Remove default underline from links */
-    color: #12100e; /* Dark text color for links */
-    display: flex; /* Use flexbox to align link content (e.g., icon and text) */
-    align-items: center; /* Vertically center link content */
-}
-
-/* Section: Hover Effect for Navbar Links */
-/* Hover effect for links to provide visual feedback */
-header a:hover {
-    color: #ababab; /* Change text color to gray on hover */
-    padding-bottom: 0.25rem; /* Add padding below to make space for the border */
-    border-bottom: 4px solid #ababab; /* Add a gray underline on hover */
-}
-
-/* Section: Active Link Styling */
-/* Styles for the currently active page link (e.g., Home when on homepage) */
-header a.active {
-    color: #ababab; /* Gray text color for active link */
-    padding-bottom: 0.25rem; /* Space for the underline */
-    border-bottom: 4px solid #ababab; /* Gray underline to indicate active page */
-}
-
-/* Section: Logo Area */
-/* Styles for the logo section on the left side of the navbar */
-.logo-area {
-    display: flex; /* Use flexbox to align logo elements */
-    justify-content: space-between; /* Space out logo elements */
-    align-items: center; /* Vertically center logo elements */
-}
-
-/* Section: Logo Text */
-/* Styles for the "Foodify" logo text */
-.logo-text {
-    font-size: 2rem; /* Large font size for the logo */
-    align-items: center; /* Ensure alignment with any adjacent elements (e.g., icon) */
-}
-
-/* Section: Search Bar */
-/* Styles for the search bar in the center of the navbar */
-.search-area {
-    background: #191919; /* Dark background for the search bar */
-    width: 290px; /* Fixed width for the search bar */
-    height: 35px; /* Fixed height for the search bar */
-    border-radius: 10px; /* Rounded corners */
-    display: flex; /* Use flexbox to align search input and icon */
-    align-items: center; /* Vertically center content */
-    color: #ababab; /* Gray text color for search bar content */
-    position: relative; /* Position relative for absolute positioning of search feedback */
-}
-
-/* Section: Search Input */
-/* Styles for the input field inside the search bar */
-.search-area input {
-    border: none; /* Remove default border */
-    background: #191919; /* Match the search bar background */
-    width: 75%; /* Take up 75% of the search bar width */
-    height: 95%; /* Nearly full height of the search bar */
-    font-size: 1rem; /* Standard font size for readability */
-    margin-left: 10px; /* Space from the left edge */
-    border-radius: 10px; /* Rounded corners */
-    color: #ababab; /* Gray text color for input */
-}
-
-/* Section: Search Input Focus */
-/* Remove default outline when the search input is focused */
-input:focus {
-    outline: none; /* Prevent the default blue outline on focus */
-}
-
-/* Section: Search Feedback */
-/* Styles for the dropdown feedback that appears below the search bar (e.g., "Found: Tacos") */
-.search-feedback {
-    position: absolute; /* Position below the search bar */
-    top: 100%; /* Start right below the search bar */
-    left: 0; /* Align with the left edge of the search bar */
-    background-color: #fff; /* White background for the dropdown */
-    padding: 10px; /* Padding inside the dropdown */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    z-index: 10; /* Ensure it appears above other elements */
-    width: 100%; /* Match the width of the search bar */
-}
-
-/* Section: Search Feedback Text */
-/* Styles for the text inside the search feedback (e.g., error messages) */
-.search-feedback p {
-    margin: 0; /* Remove default margin */
-    color: #ff0000; /* Red text for error messages (e.g., "recipe not available") */
-}
-
-/* Section: Search Feedback Link */
-/* Styles for links inside the search feedback (e.g., clickable recipe name) */
-.search-feedback a {
-    color: #007bff; /* Blue color for links */
-    text-decoration: none; /* Remove default underline */
-}
-
-/* Section: Search Feedback Link Hover */
-/* Hover effect for links in the search feedback */
-.search-feedback a:hover {
-    text-decoration: underline; /* Add underline on hover for visual feedback */
-}
-
-/* Section: Tooltip for Navbar Icons */
-/* Styles for tooltips that appear when hovering over navbar icons (e.g., Home, Favourites) */
-.tooltip {
-    position: relative; /* Position relative for absolute positioning of tooltip text */
-    display: inline; /* Display inline with other elements */
-}
-
-/* Section: Tooltip Text */
-/* Styles for the tooltip text that appears on hover */
-.tooltip-text {
-    position: absolute; /* Position relative to the tooltip container */
-    left: 0; /* Align with the left edge */
-    bottom: 100; /* Incorrect: likely meant to be bottom: 100% (position below) */
-    top: 100%; /* Position below the icon */
-    font-size: 0.78rem; /* Small font size for tooltip */
-    background-color: #323232; /* Dark background for tooltip */
-    color: white; /* White text for readability */
-    opacity: 0.6; /* Slightly transparent */
-    padding: 5px; /* Padding inside the tooltip */
-    white-space: nowrap; /* Prevent text wrapping */
-    border-radius: 5px; /* Rounded corners */
-    visibility: hidden; /* Hidden by default */
-    z-index: 1; /* Ensure it appears above other elements */
-}
-
-/* Section: Tooltip Hover Effect */
-/* Show the tooltip text when hovering over the tooltip container */
-.tooltip:hover .tooltip-text {
-    visibility: visible; /* Make the tooltip visible on hover */
-}
-
-/* Section: Material Icons */
-/* Styles for Material-UI icons used in the navbar (e.g., search, home, heart) */
-.material-symbols-outlined {
-    padding: 10px; /* Padding around icons for spacing */
-}
-
-/* Section: Responsive Design for Medium Screens */
-/* Adjust styles for screens smaller than 768px (e.g., tablets) */
-@media (max-width: 768px) {
+    box-sizing: border-box;
+  }
+  
+  /* Section: Navbar Styling */
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #ffdfb7;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Section: Navbar Links */
+  header a.nav-link {
+    text-decoration: none;
+    color: #b36b00;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Section: Hover Effect for Navbar Links */
+  header a.nav-link:hover {
+    color: #ffa726;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #ffa726;
+  }
+  
+  /* Section: Active Link Styling */
+  header a.nav-link.active {
+    color: #ffa726;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #ffa726;
+  }
+  
+  /* Section: Logo Area */
+  .logo-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Section: Logo Text */
+  .logo-text {
+    font-size: 2rem;
+    color: #b36b00;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Section: Logo Icon */
+  .logo-icon {
+    margin-right: 5px;
+  }
+  
+  /* Section: Search Bar */
+  .search-area {
+    background: #333;
+    width: 290px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section: Search Icon */
+  .search-icon {
+    color: #ffa726;
+    margin-left: 10px;
+  }
+  
+  /* Section: Search Input */
+  .search-area input.search-input {
+    border: none;
+    background: #333;
+    width: 75%;
+    height: 95%;
+    font-size: 1rem;
+    margin-left: 5px;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  /* Section: Search Input Focus */
+  input:focus {
+    outline: none;
+  }
+  
+  /* Section: Search Feedback */
+  .search-feedback {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fffdf7;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Section: Search Feedback Image */
+  .search-result-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section: Search Feedback Text */
+  .search-result-text {
+    color: #b36b00;
+    font-weight: 500;
+  }
+  
+  /* Section: Search Feedback Link */
+  .search-feedback a.search-result-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b36b00;
+  }
+  
+  /* Section: Search Feedback Link Hover */
+  .search-feedback a.search-result-link:hover {
+    color: #ffa726;
+  }
+  
+  /* Section: Search Feedback Error */
+  .search-feedback p.search-error {
+    margin: 0;
+    color: #e53935;
+    font-size: 0.9rem;
+  }
+  
+  /* Section: Tooltip for Navbar Icons */
+  .tooltip {
+    position: relative;
+    display: inline;
+  }
+  
+  /* Section: Tooltip Text */
+  .tooltip-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 0.78rem;
+    background-color: #323232;
+    color: white;
+    opacity: 0.6;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 5px;
+    visibility: hidden;
+    z-index: 1;
+  }
+  
+  /* Section: Tooltip Hover Effect */
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+  }
+  
+  /* Section: Navbar Icons */
+  .navbar-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Section: Icon Styling */
+  .navbar-icons .icon {
+    font-size: 1.5rem;
+    color: #b36b00;
+  }
+  
+  /* Section: Text Styling */
+  .navbar-icons .text {
+    margin-left: 5px;
+    color: #b36b00;
+  }
+  
+  /* Section: Responsive Design for Medium Screens */
+  @media (max-width: 768px) {
     header nav {
-        padding: 5px; /* Reduce padding for smaller screens to save space */
+      padding: 5px;
     }
-
+  
     .logo-text {
-        font-size: 1.5rem; /* Reduce logo font size for better fit */
+      font-size: 1.5rem;
     }
-
+  
     .search-area {
-        width: 200px; /* Shrink the search bar width */
+      width: 200px;
     }
-
+  
     .navbar-icons .text {
-        display: none; /* Hide the text labels (e.g., "Home", "Favourites") to save space */
+      display: none;
     }
-
+  
     .navbar-icons .icon {
-        padding: 5px; /* Reduce padding around icons */
+      padding: 5px;
     }
-
+  
     .tooltip-text {
-        font-size: 0.65rem; /* Slightly smaller tooltip text for better fit */
+      font-size: 0.65rem;
     }
-}
-
-/* Section: Responsive Design for Small Screens */
-/* Adjust styles for screens smaller than 480px (e.g., mobile phones) */
-@media (max-width: 480px) {
+  }
+  
+  /* Section: Responsive Design for Small Screens */
+  @media (max-width: 480px) {
     .logo-text {
-        font-size: 1.2rem; /* Further reduce logo font size */
+      font-size: 1.2rem;
     }
-
+  
     .search-area {
-        width: 150px; /* Further shrink the search bar */
+      width: 150px;
     }
-
+  
     .navbar-icons .icon {
-        padding: 3px; /* Even smaller padding for icons to fit tight spaces */
+      padding: 3px;
     }
-}
+  }

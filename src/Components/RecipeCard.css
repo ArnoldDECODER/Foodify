@@ -1,53 +1,309 @@
+/* ========================= */
+/* ✨ Recipe Card Styling */
+/* ========================= */
+
+.recipe-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
 .recipe-card {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff5e1;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .recipe-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .recipe-card h1 {
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .recipe-card h2 {
-    margin-top: 20px;
-    color: #444;
-  }
-  
-  .recipe-card ul, .recipe-card ol {
-    text-align: left;
-    padding-left: 20px;
-  }
-  
-  .recipe-card li {
-    margin: 10px 0;
-  }
-  a {
-    text-decoration: none;
-  }
+  max-width: 1200px; /* Increased from 600px to cover ~2/3 of a 1920px screen */
+  width: 80%; /* Ensures it takes up 80% of the viewport width, up to max-width */
+  background-color: #fffdf7;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
 
-  .button-container {
-    display: flex;
-    gap: 15px; /* Adjust the space between the two buttons */
-    justify-content: center;
-    margin-top: 10px; /* Adds spacing above the buttons */
-  }
+.recipe-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #b36b00;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .button-wrapper {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 10px; /* Add spacing between the buttons */
-    align-items: center; /* Center the buttons horizontally */
-    margin-top: 10px; /* Add spacing above the buttons */
-  }
-  
+.recipe-image {
+  width: 90%;
+  height: 400px; /* Increased height to scale with wider card */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.favourite-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.favourite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.favourite-icon {
+  font-size: 1.5rem;
+  color: #b36b00;
+}
+
+.favourite-icon.filled {
+  color: #b36b00;
+}
+
+.favourite-section span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.recipe-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b36b00;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #b36b00;
+  margin-bottom: 15px;
+}
+
+.ingredient-list,
+.step-list {
+  padding-left: 20px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ingredient-list li,
+.step-list li {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========================= */
+/* ✨ Review Section Styling */
+/* ========================= */
+
+.review-section {
+  background-color: #fffdf7;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+.review-section h2 {
+  font-size: 1.5rem;
+  color: #b36b00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-section h3 {
+  font-size: 1.25rem;
+  color: #b36b00;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.review-input,
+.review-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.review-input.rating-input {
+  width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.review-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  display: inline-block;
+  width: 100%;
+  background-color: #ffa726;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #fb8c00;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.rating-stars label {
+  color: #b36b00;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rating-stars .star-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-stars .star-container span {
+  margin: 0 2px;
+  transition: color 0.2s ease;
+}
+
+.rating-stars .filled {
+  color: #ffc107;
+}
+
+.rating-stars .empty {
+  color: #ddd;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.comment-list li {
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.comment-list li .comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-list li .comment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-list li .comment-header strong {
+  color: #b36b00;
+}
+
+.comment-list li .comment-rating {
+  display: flex;
+  align-items: center;
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.comment-list li .comment-rating span {
+  margin: 0 2px;
+}
+
+.comment-list li .comment-text {
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.comment-list li .remove-button {
+  background: none;
+  border: none;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.comment-list li .remove-button:hover {
+  text-decoration: underline;
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #b36b00;
+  margin-bottom: 10px;
+}
+
+.average-rating span {
+  margin-right: 6px;
+  font-size: 1rem;
+}
+
+.average-rating .star-container {
+  display: flex;
+  align-items: center;
+}
+
+.average-rating .star-container span {
+  margin: 0 2px;
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+.no-comments {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}

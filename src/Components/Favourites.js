@@ -11,23 +11,26 @@ const Favourites = () => {
 
   return (
     <div className="favourites-container">
-      <h1>Favourites List</h1>
+      <h1 className="favourites-title">Favourites List</h1>
       <div className="favourites-grid">
         {favouriteItems.length === 0 ? (
-          <p>No favourite recipes yet!</p>
+          <p className="no-favourites">No favourite recipes yet!</p>
         ) : (
           favouriteItems.map((recipe) => (
             <div key={recipe.id} className="favourite-recipe">
-              <img src={recipe.image} alt={recipe.title} />
-              <h3>{recipe.title}</h3>
+              <img src={recipe.image} alt={recipe.title} className="recipe-image" />
+              <h3 className="recipe-title">{recipe.title}</h3>
               <div className="button-wrapper">
+                <Link to={`/recipe/${recipe.id}`}>
+                  <button className="view-button">View Recipe</button>
+                </Link>
+                <button
+                  onClick={() => dispatch(removeFavouriteItem(recipe.id))}
+                  className="remove-button"
+                >
+                  <FavoriteIcon className="favourite-icon filled" />
+                </button>
               </div>
-              <Link to={`/recipe/${recipe.id}`}>
-                <button className="button-container">View Recipe</button>
-              </Link>
-              <button onClick={() => dispatch(removeFavouriteItem(recipe.id))}>
-                <FavoriteIcon style={{ color: "black" }} />
-              </button>
             </div>
           ))
         )}

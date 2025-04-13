@@ -38,12 +38,18 @@ const Header = () => {
     }
   };
 
+  // Function to normalize image paths
+  const normalizeImagePath = (imagePath) => {
+    // Ensure the path starts with a "/"
+    return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
+  };
+
   return (
     <header>
       <nav>
         <div className="logo-area">
           <h1 className="logo-text">
-            <span>
+            <span className="logo-icon">
               <RestaurantIcon />
             </span>
             Foodify
@@ -52,7 +58,7 @@ const Header = () => {
 
         <div className="search-area">
           <div className="tooltip">
-            <span>
+            <span className="search-icon">
               <SearchIcon />
             </span>
             <span className="tooltip-text">Search</span>
@@ -62,15 +68,23 @@ const Header = () => {
             placeholder="Search"
             value={searchTerm}
             onChange={handleSearchChange}
+            className="search-input"
           />
           {searchResult && (
             <div className="search-feedback">
               {searchResult.found ? (
-                <NavLink to={`/recipe/${searchResult.recipe.id}`}>
-                  Found: {searchResult.recipe.title}
+                <NavLink to={`/recipe/${searchResult.recipe.id}`} className="search-result-link">
+                  <img
+                    src={normalizeImagePath(searchResult.recipe.image)}
+                    alt={searchResult.recipe.title}
+                    className="search-result-image"
+                  />
+                  <span className="search-result-text">
+                    Found: {searchResult.recipe.title}
+                  </span>
                 </NavLink>
               ) : (
-                <p>{searchResult.message}</p>
+                <p className="search-error">{searchResult.message}</p>
               )}
             </div>
           )}
@@ -78,7 +92,7 @@ const Header = () => {
 
         <div className="navbar-icons">
           <div className="tooltip">
-            <NavLink activeClassName="active" to="/homepage">
+            <NavLink activeClassName="active" to="/homepage" className="nav-link">
               <span className="icon">
                 <HomeIcon />
               </span>
@@ -88,7 +102,7 @@ const Header = () => {
           </div>
 
           <div className="tooltip">
-            <NavLink activeClassName="active" to="/favourites">
+            <NavLink activeClassName="active" to="/favourites" className="nav-link">
               <span className="icon">
                 <FavoriteIcon />
               </span>
